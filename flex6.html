@@ -1,99 +1,237 @@
 <html>
-    <head>
-        <style>
-            .container
-            {
-                display: :flex;
-                background:red;
-                height:100%;
-                width:100%;
-               
-            }
-            .head
-            {
-                display:flex;
-                justify-content:  space-evenly;
-                background:gray;
-            }
-            .body
-            {
-                display:flex;
-                width:100%;
-                height:100%;
-                background-color: aqua;
-            }
-            .bc1
-            {
-                display:flex;
-               width:50%;
-               background-color: lightcoral;
-               justify-content: space-evenly;
-               flex-direction: column;
-            }
-            .bc2
-            {   
-                display:flex;
-                width:50%;
-                background-color: hotpink;
-                justify-content: space-evenly;
-                flex-direction: column;
-            }
-           
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="head">
+
+<head>
+    <style>
+        .container {
+            display: :flex;
+            background: hotpink;
+            height: 100%;
+            width: 100%;
+
+        }
+
+        .table,
+        .table {
+            height: 50%;
+            width: 50%;
+        }
+
+        .table1 {
+            display: flex;
+
+            background: wheat;
+            height: 50%;
+        }
+
+        .table2 {
+            display: flex;
+            background: firebrick;
+            height: 50%;
+
+        }
+
+        .body1 {
+            display: flex;
+            background: lightcoral;
+            width: 50%;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .body2 {
+            display: flex;
+            background: fuchsia;
+            width: 50%;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+
+        .body3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background: slateblue;
+            width: 35%;
+        }
+
+        .body4 {
+            display: flex;
+            width: 35%;
+            background: brown;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .body5 {
+            display: flex;
+            background: aqua;
+            width: 30%;
+            flex-direction: column;
+        }
+
+        /* .heading
+       {
+        display:flex;
+        background: seagreen;
+        height:100%;
+        width:100%;
+        justify-content: center;
+        
+       }  */
+
+        /* .heading {
+            display: flex;
+            width: 100%;
+            background: peru;
+        }
+        .ibu
+        {
+            display: flex;
+            background-color: blue;
+            height:100%;
+        }
+        .heading1 {
+            display: flex;
+            width: 50%;
+            background: peru;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .heading-iteam {
+            display: flex;
+            width: 50%;
+            background: palevioletred;
+            flex-direction: column;
+            justify-content: space-evenly;
+        } */
+        /* .hea{
+            background-color: yellow;
+        }
+        .sri{
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+
+        } */
+        .body6
+        {
+            display:flex;
+            background: darkgrey;
+            flex-direction: column;
+            text-align: center;
+        }
+        .body7
+        {
+            display:flex;
+            background:darkred;
+            flex-direction: row;
+            height:100%;
+        }
+        .body8
+        {
+            display:flex;
+            background:hotpink;
+            width:50%;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        .body9
+        {
+            display:flex;
+            background: forestgreen;
+            width:50%;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="table1">
+            <div class="body1">
                 <div>
-                    col1
+                    row1
                 </div>
                 <div>
-                    col2
-                </div>
-                <div>
-                    col3
-                </div>
-                <div>
-                    col4
-                </div>
-                <div>
-                    col5
+                    row2
                 </div>
 
             </div>
-               
-           
-            <div class="body">
-                <div  class="bc1">
-                    <div>
-                        row1
-                    </div>
-                    <div>
-                        row2
-                    </div>
-                    <div>
-                        row3
-                    </div>
-                    <div>
-                        row4
-                    </div>
-                    <div>
-                        row5
-                    </div>
+            <div class="body2">
+                <div>
+                    row1
                 </div>
-                <div  class="bc2">
-                    <div>
-                        row1
-                    </div>
-                    <div>
-                        row2
-                    </div>
-                    <div>
-                        row3
-                    </div>
+                <div>
+                    row2
                 </div>
-                
+                <div>
+                    row3
+                </div>
             </div>
         </div>
-    </body>
+        <div class="table2">
+            <div class="body3">
+                <div>
+                    row1
+                </div>
+                <div>
+                    row2
+                </div>
+            </div>
+            <div class="body4">
+                <div>
+                    row1
+                </div>
+                <div>
+                    row2
+                </div>
+            </div>
+            <div class="body5">
+                <div  class="body6">
+                    row1
+                </div>
+                <div class="body7">
+                    <DIV class="body8">
+                      <div>
+                        row1
+                      </div>
+                      <div>
+                        row2
+                      </div>
+                      <div>
+                        row3
+                      </div>
+                    </DIV>
+                    <div class="body9">
+                        <div>
+                            row1
+                        </div>
+                        <div>
+                            row2
+                        </div>
+                        <div>
+                            row3
+                        </div>
+                    </div>
+                </div>
+             </div>
+
+        
+            <!-- <div class="body5">
+                <div class="hea">
+                    heading
+                </div>
+                <div class="sri">
+                    <div style="width:50%; background-color:blueviolet; height:100%">col1</div>
+                    <div style="width:50%; background-color:blue; height:100%">
+                        col2
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</body>
+
 </html>
