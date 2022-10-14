@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-image: url("pexels-photo-114979.jpeg");
+        }
+
+        h1 {
+            color: rgb(116, 13, 116);
+        }
+
+        .textarea:hover {
+            color: #063B9E;
+        }
+
+        .hello {
+            background-color: #9b59b6;
+        }
+
+        span#remove {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body onload="onload()">
+
+    <div class="container p-5">
+        <div class="card">
+                <div class="card-header">
+                <h1>Form Validation</h1>
+            </div>
+            <div class="card-body bg bg-light">
+                <div class="row mt-2 ">
+                    <div class="col-lg-4">
+                        <div class="textarea">
+                            <label for="fname" class="form-label fw-bold"> <i class="fa fa-user-circle" style="font-size:20px"></i> First name</label>
+                            <input type="text" class="form-control" id="fname" onkeyup="input()" placeholder="Enter your firstname">
+                            <div id="fnameError"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="textarea">
+                            <label for="lname" class="form-label fw-bold"> <i class="fa fa-user-circle" style="font-size:20px"></i> Last name</label>
+                            <input type="text" class="form-control" id="lname" onkeyup="input()" placeholder="Enter your lastname">
+                            <div id="lnameError"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="textarea">
+                            <label for="email" class="form-label fw-bold"> <i class="fa fa-envelope" style="font-size:20px"></i> Email</label>
+                            <input type="text" class="form-control" id="email" value="" onkeyup="input()" placeholder="Enter your emailid">
+                            <div id="message"> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3 ">
+                    <div class="col-lg-4">
+                        <div class="textarea">
+                            <label for="password" class="form-label fw-bold"> <i class="fa fa-eye-slash" style="font-size:20px"></i> Password</label>
+                            <input type="password" class="form-control" id="password" maxlength="13" placeholder="Enter your password" onkeyup="input()" title="must be contain, one uppercase onelowercase,one numberic number">
+                            <div id="passwordError"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="textarea">
+                            <label for="address" class="form-label fw-bold"> <i class="fa fa-address-book" style="font-size:20px"></i> Address</label>
+                            <input type="text" class="form-control" id="address" onkeyup="input()" placeholder="Enter your permanent address">
+                            <div id="addressError"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="textarea">
+                            <label for="Phonenumber" class="form-label fw-bold"> <i class="fa fa-phone-square" style="font-size:20px"></i> Phonenumber</label>
+                            <input type="text" class="form-control" id="Phonenumber" maxlength="10" onkeyup="input()" value="" placeholder="Enter your phonenumber">
+                            <div id="PhonenumberError"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-lg-4">
+                        <div class="textarea">
+                            <label for="Aadharnumber" class="form-label fw-bold"> <i class="fa fa-lock" style="font-size:24px"></i> Aadhar Number</label>
+                            <input type="password" class="form-control" id="Aadharnumber"  onkeyup="input()" maxlength="12" value="" placeholder="Enter your  Aadharnumber">
+                            <div id="AadharnumberError"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="textarea">
+                            <label for="pincode" class="form-label fw-bold"> <i class='fas fa-map-marker-alt' style='font-size:20px'></i>Pincode</label>
+                            <input type="text" class="form-control" id="pincode" value="" maxlength="6"  onkeyup="input()" placeholder="Enter your location pincode">
+                            <div id="pincodeError"></div>
+                        </div> 
+                    </div>
+                    <div class="col-lg-4 mt-4">
+                        <div class="row">
+                            <div class="col-lg-12 mt-3">
+                                    <input type="file" id="file"  onchange ="input()" style="display:none">
+                                    File : <label for="file" id="fileLabel" type="file" class="bg bg-primary" style="color:white;padding:7px; border-radius:5px;">choose file</label>
+                            </div>
+                            <div class="col-lg-12"><span id="fileList"></span></div>
+                            <div class="col-lg-12">
+                                <div id="error" class="text-primary mt-3"></div>
+                            </div>
+                            <div id="note" class="col-lg-12  text-danger">Note:<br>* File size should not exceed morethan 1 mb.<br>* File name should be doc or pdf and docx.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-lg-2">
+                        <button class="btn btn-primary" id="button">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //  when all input value is valid button was enable otherwise button disabled  
+        function input() {
+            var array = [
+                { "input": "fname" },
+                { "input": "lname" },
+                { "input": "email" },
+                { "input": "password" },
+                { "input": "address" },
+                { "input": "Phonenumber" },
+                { "input": "Aadharnumber" },
+                { "input": "pincode" },
+                { "input": "file" }
+            ]
+           
+        
+            button.disabled = true
+            var countValidate = 0;
+            array.forEach(function (v) {
+                var input = document.getElementById(v.input);
+
+                if (input.value == "") {
+                    setDisable = true;                  
+                } else {
+                    countValidate++;
+                }
+            })
+            console.log(countValidate);
+            if (array.length == countValidate) {
+                
+                setDisable = false
+            }
+            document.getElementById("button").disabled = setDisable
+
+        
+            // file storage
+            var input = document.getElementById("file");
+            var output = document.getElementById("fileList");
+            var children = "";
+            for (var i = 0; i < input.files.length; ++i) {
+                children += '<ul>' + input.files.item(i).name + '<span  id="remove" onclick="return this.parentNode.remove()" onmouseup="change()">X</span>' + '</ul>'
+            }
+            output.innerHTML = children;
+
+            // only accept pdf,doc and docx files
+            if (document.getElementById("file").files[0].name) {
+                var type = document.getElementById("file").files[0].name;
+                var upload = type.split(".").pop();
+                if (upload == "pdf" || upload == "docx") {
+                    if (document.getElementById("file").files[0].size > 1024 * 1024) {
+                        document.getElementById("error").innerHTML = "The allowed file size is 1MB ";
+                        button.disabled = true;
+                        document.getElementById("file").disabled = false;
+                        document.getElementById("fileList").innerHTML = "";
+                        document.getElementById("note").innerHTML = "Note:<br>* File size should not exceed morethan 1 mb.<br>* File name should be doc or pdf and docx.";
+                    }
+                    else {
+                        document.getElementById("error").innerHTML = "File added successfully"
+                        button.disabled = false;
+                        document.getElementById("file").disabled = true;
+                        document.getElementById("fileLabel").style.opacity = 0.6;
+                        document.getElementById("note").innerHTML = "";
+                    }
+                } else {
+                    document.getElementById("error").innerHTML = "<P>This type of file couldnot accept.</P>";
+                    button.disabled = true;
+                    document.getElementById("file").disabled = false;
+                    document.getElementById("fileList").innerHTML = "";
+                    document.getElementById("note").innerHTML = "Note:<br>* File size should not exceed morethan 1 mb.<br>* File name should be doc or pdf and docx.";
+                }
+            }
+        }       
+        function onload() {
+            document.getElementById("button").disabled = true;
+        }
+        // remove file button disabled
+        function change() {
+            var remove = document.getElementById("remove");
+            if (remove.value == "" || remove.length == null) {
+                button.disabled = true;
+                error.innerHTML = "";
+                document.getElementById("fileLabel").style.opacity = "";
+                document.getElementById("file").disabled = false;
+                document.getElementById("note").innerHTML = "Note:<br>* File size should not exceed morethan 1 mb.<br>* File name should be doc or pdf and docx.";
+            } else {
+                button.disabled = false;
+                error.innerHTML = "File added successfully";
+                document.getElementById("file").disabled = true;
+            }
+        }
+        // fname validation
+
+        document.getElementById("fname").addEventListener("keyup", () => {
+       
+            var fname = document.getElementById("fname");
+            if (fname.value == "" || fname == null) {
+                document.getElementById("fnameError").innerHTML = "This field is required";
+                document.getElementById("fnameError").setAttribute("class", "text-danger")
+                document.getElementById("button").disabled = true;
+                document.getElementById("fname").setAttribute("class", "form-control is-invalid")
+            }
+            if (!(document.getElementById("fname").value).match(/^[ a-zA-Z]*$/g)) {
+                document.getElementById("fnameError").innerHTML = "Enter valid character";
+                document.getElementById("fnameError").setAttribute("class", "text-danger");
+                document.getElementById("fname").setAttribute("class", "form-control is-invalid");
+                document.getElementById("button").disabled = true;
+            } else {
+                document.getElementById("fnameError").innerHTML = "Looks Good!";
+                document.getElementById("fnameError").setAttribute("class", "text-success");
+                document.getElementById("fname").setAttribute("class", "form-control is-valid");
+            }
+            if (fname.value.length < 3) {
+                document.getElementById("fnameError").innerHTML = "Firstname must be contain atleast 3 character";
+                document.getElementById("fnameError").setAttribute("class", "text-danger");
+                document.getElementById("fname").setAttribute("class", "form-control is-invalid");
+                document.getElementById("button").disabled = true;
+            }
+        })
+        // lname validation
+
+        document.getElementById("lname").addEventListener("keyup", () => {
+
+            if (!(document.getElementById("lname").value).match(/^[ a-zA-Z]*$/g)) {
+                document.getElementById("lnameError").innerHTML = "Enter valid character";
+                document.getElementById("lnameError").setAttribute("class", "text-danger");
+                document.getElementById("button").disabled = true;
+                document.getElementById("lname").setAttribute("class", "form-control is-invalid");
+            } else {
+                document.getElementById("lnameError").innerHTML = "Looks Good!";
+                document.getElementById("lnameError").setAttribute("class", "text-success");
+                document.getElementById("lname").setAttribute("class", "form-control is-valid");
+               
+            }
+            if (lname.value.length < 3) {
+                document.getElementById("lnameError").innerHTML = "Lastname must be contain atleast 3 character";
+                document.getElementById("lnameError").setAttribute("class", "text-danger");
+                document.getElementById("lname").setAttribute("class", "form-control is-invalid");
+                document.getElementById("button").disabled = true;
+            }
+        })
+           
+               
+        
+        // email validation
+
+        document.getElementById("email").addEventListener('keyup', () => {
+           
+            if ((/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[a-zA-Z]{1,3})|(([a-zA-Z]+\.)+[a-zA-Z]{2,}))$/).test(email.value)) {
+               document.getElementById("message").innerText = "Looks Good!";
+               document.getElementById("message").setAttribute("class", "text-success")
+               document.getElementById("email").setAttribute("class", "form-control is-valid")
+            } else {
+                document.getElementById("message").innerText = "Invalid email";
+                document.getElementById("message").setAttribute("class", "text-danger")
+                document.getElementById("email").setAttribute("class", "form-control is-invalid")
+                button.disabled = true;
+            }
+
+             if (!(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[a-zA-Z]{1,3})|(([a-zA-Z]+\.)+[a-zA-Z]{2,}))$/).test(email.value)) {
+                        button.disabled = true;
+             } 
+        })
+        
+    
+        // password validation
+
+        document.getElementById("password").addEventListener("keyup", () => {
+    
+            var password = document.getElementById("password");
+
+            if (password.value.length == "") {
+                document.getElementById("passwordError").innerHTML = "This field is required";
+                document.getElementById("passwordError").setAttribute("class", "text-danger")
+                document.getElementById("button").disabled = true;
+                document.getElementById("password").setAttribute("class", "form-control is-invalid")
+
+            }
+            var password = document.getElementById("password").value;
+            if (password.length < 8) {
+                document.getElementById("passwordError").innerHTML = "Paaword length must be atleat 8 characters";
+                document.getElementById("password").setAttribute("class", "form-control is-invalid")
+                document.getElementById("passwordError").setAttribute("class", "text-danger")
+                document.getElementById("button").disabled = true;
+
+            } else {
+                document.getElementById("passwordError").innerHTML = "Looks Good!";
+                document.getElementById("password").setAttribute("class", "form-control is-valid")
+                document.getElementById("passwordError").setAttribute("class", "text-success")
+
+            }
+
+            if (password.length > 12) {
+                document.getElementById("passwordError").innerHTML = "password length between 8 to 12 characters";
+                document.getElementById("password").setAttribute("class", "form-control is-invalid")
+                document.getElementById("passwordError").setAttribute("class", "text-danger")
+                document.getElementById("button").disabled = true;
+            }
+            if (password.search(/[0-9]/) == -1) {
+                document.getElementById("passwordError").innerHTML = " One numeric number need";
+                document.getElementById("password").setAttribute("class", "form-control is-invalid")
+                document.getElementById("passwordError").setAttribute("class", "text-danger")
+                document.getElementById("button").disabled = true;
+                return false;
+            }
+            if (password.search(/[a-z]/) == -1) {
+                document.getElementById("passwordError").innerHTML = "One lowercaseletter need";
+                document.getElementById("password").setAttribute("class", "form-control is-invalid")
+                document.getElementById("passwordError").setAttribute("class", "text-danger")
+                document.getElementById("button").disabled = true;
+                return false;
+            }
+            if (password.search(/[A-Z]/) == -1) {
+                document.getElementById("passwordError").innerHTML = "One uppercaseletter need";
+                document.getElementById("password").setAttribute("class", "form-control is-invalid")
+                document.getElementById("passwordError").setAttribute("class", "text-danger")
+                document.getElementById("button").disabled = true;
+                return false;
+            }
+            if (password.search(/[!/@/#/$]/) == -1) {
+                document.getElementById("passwordError").innerHTML = "One specialcharacter need";
+                document.getElementById("password").setAttribute("class", "form-control is-invalid")
+                document.getElementById("passwordError").setAttribute("class", "text-danger")
+                document.getElementById("button").disabled = true;
+            }
+        })
+               
+                  
+        
+        // address validation
+
+        document.getElementById("address").addEventListener("keyup", () => {
+           
+                 if (!(document.getElementById("address").value).match(/^[ a-zA-Z0-9()/,]*$/g)) {
+                document.getElementById("addressError").innerHTML = "Enter valid character";
+                document.getElementById("addressError").setAttribute("class", "text-danger");
+                document.getElementById("button").disabled = true;
+                document.getElementById("address").setAttribute("class", "form-control is-invalid")
+            } else {
+                document.getElementById("addressError").innerHTML = "Looks Good!";
+                document.getElementById("addressError").setAttribute("class", "text-success");
+                document.getElementById("address").setAttribute("class", "form-control is-valid")
+            }
+            if (address.value == "") {
+                document.getElementById("addressError").innerHTML = "This field is required";
+                document.getElementById("addressError").setAttribute("class", "text-danger");
+                document.getElementById("address").setAttribute("class", "form-control is-invalid")
+                document.getElementById("button").disabled = true;
+            }
+        })
+            
+        
+        //   Phonenumber validation
+
+        document.getElementById("Phonenumber").addEventListener("keyup", () => {
+          
+                 if (!(document.getElementById("Phonenumber").value).match(/^[0-9]*$/g)) {
+                document.getElementById("PhonenumberError").innerHTML = "Enter valid character";
+                document.getElementById("PhonenumberError").setAttribute("class", "text-danger");
+                document.getElementById("Phonenumber").setAttribute("class", "form-control is-invalid");
+                document.getElementById("button").disabled = true;
+            } else {
+                document.getElementById("PhonenumberError").innerHTML = "Looks Good!";
+                document.getElementById("PhonenumberError").setAttribute("class", "text-success")
+                document.getElementById("Phonenumber").setAttribute("class", "form-control is-valid")
+            }
+            if (Phonenumber.value.length < 10) {
+                document.getElementById("PhonenumberError").innerHTML = "phonenumber length must be 10 digit";
+                document.getElementById("PhonenumberError").setAttribute("class", "text-danger");
+                document.getElementById("Phonenumber").setAttribute("class", "form-control is-invalid");
+                document.getElementById("button").disabled = true;
+            }
+        })
+                
+                    
+                
+        // pincode validation
+
+        document.getElementById("pincode").addEventListener("keyup", () => {
+         
+                if (!(document.getElementById("pincode").value).match(/^[0-9]*$/g)) {
+                document.getElementById("pincodeError").innerHTML = "Enter valid character";
+                document.getElementById("pincodeError").setAttribute("class", "text-danger");
+                document.getElementById("pincode").setAttribute("class", "form-control is-invalid");
+                document.getElementById("button").disabled = true;
+            } else {
+                document.getElementById("pincodeError").innerHTML = "Looks Good!";
+                document.getElementById("pincodeError").setAttribute("class", "text-success")
+                document.getElementById("pincode").setAttribute("class", "form-control is-valid")
+               
+            }
+            if (pincode.value.length < 6) {
+                document.getElementById("pincodeError").innerHTML = "pincode length must be 6 digit";
+                document.getElementById("pincodeError").setAttribute("class", "text-danger");
+                document.getElementById("pincode").setAttribute("class", "form-control is-invalid");
+                document.getElementById("button").disabled = true;
+            }
+        })
+
+          
+               
+        // Aadharnumber validation
+
+        document.getElementById("Aadharnumber").addEventListener("keyup", () => {
+         
+                if (!(document.getElementById("Aadharnumber").value).match(/^[0-9]*$/g)) {
+                document.getElementById("AadharnumberError").innerHTML = "Enter valid character";
+                document.getElementById("AadharnumberError").setAttribute("class", "text-danger");
+                document.getElementById("Aadharnumber").setAttribute("class", "form-control is-invalid")
+                document.getElementById("button").disabled = true;
+            } else {
+                document.getElementById("AadharnumberError").innerHTML = "Looks Good!";
+                document.getElementById("AadharnumberError").setAttribute("class", "text-success")
+                document.getElementById("Aadharnumber").setAttribute("class", "form-control is-valid")
+               
+            }
+
+            if (Aadharnumber.value.length < 12) {
+                document.getElementById("AadharnumberError").innerHTML = "Aadharnumber length must be 12 digit";
+                document.getElementById("AadharnumberError").setAttribute("class", "text-danger");
+                document.getElementById("Aadharnumber").setAttribute("class", "form-control is-invalid")
+                document.getElementById("button").disabled = true;
+            }
+            
+        })
+    </script>
+</body>
+
+</html>
